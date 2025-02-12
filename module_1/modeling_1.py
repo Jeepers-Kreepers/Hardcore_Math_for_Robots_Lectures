@@ -2,9 +2,9 @@ import sympy                                        # Импортирует б�
 from sympy.plotting import plot                     # Импортирует функцию plot для построения графиков.
 
 U = sympy.symbols('U')                              # Определяет символ U (напряжение).
-T_m = sympy.symbols('T_m')                          # Определяет символ T_m (Константа / Постоянная времени).
+T_m = sympy.symbols('T_m')                          # Определяет символ T_m (Константа / Электромеханическая Постоянная времени).
 t = sympy.symbols('t')                              # Определяет символ t (время).
-k_e = sympy.symbols('k_e', positive=True)    # Опр k_e > 0 коэффициент обратной ЭДС
+k_e = sympy.symbols('k_e', positive=True)    # Опр k_e > 0 коэффициент обратной ЭДС (конструктивная постоянная)
 omega = sympy.Function('omega')                     # Определяет функцию omega(t) - угловая скорость rad/s
 
 ode = sympy.Eq(omega(t).diff(t),
